@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FakeStore</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
 </resources>
