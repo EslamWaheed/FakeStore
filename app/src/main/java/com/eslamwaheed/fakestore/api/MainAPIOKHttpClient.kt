@@ -20,10 +20,6 @@ class MainAPIOKHttpClient {
                 (ApiConst.CONNECT_TIMEOUT_MULTIPLIER * ApiConst.DEFAULT_READ_TIMEOUT_IN_SEC).toLong(),
                 TimeUnit.SECONDS
             )
-        oktHttpClientBuilder.addInterceptor { chain ->
-            val builder = chain.request().newBuilder()
-            chain.proceed(builder.build())
-        }
         oktHttpClientBuilder.addInterceptor(HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         })
