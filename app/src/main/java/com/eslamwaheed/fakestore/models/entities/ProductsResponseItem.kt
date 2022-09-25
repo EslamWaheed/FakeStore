@@ -1,7 +1,10 @@
 package com.eslamwaheed.fakestore.models.entities
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProductsResponseItem(
     @SerializedName("id")
     val id: Int? = 0,
@@ -17,4 +20,4 @@ data class ProductsResponseItem(
     val image: String? = "",
     @SerializedName("rating")
     val rating: Rating? = Rating()
-)
+) : Parcelable

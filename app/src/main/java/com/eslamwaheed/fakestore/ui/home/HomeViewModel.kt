@@ -5,12 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.eslamwaheed.fakestore.api.NetworkResult
 import com.eslamwaheed.fakestore.base.BaseViewModel
+import com.eslamwaheed.fakestore.models.entities.ProductsResponseItem
+import com.eslamwaheed.fakestore.models.entities.Rating
 import com.eslamwaheed.fakestore.models.responses.ProductsResponse
 import com.eslamwaheed.fakestore.repository.ProductsRepository
 import com.eslamwaheed.fakestore.util.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

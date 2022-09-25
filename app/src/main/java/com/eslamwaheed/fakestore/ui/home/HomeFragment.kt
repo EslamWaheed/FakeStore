@@ -3,7 +3,7 @@ package com.eslamwaheed.fakestore.ui.home
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.eslamwaheed.fakestore.adapters.ProductsAdapter
 import com.eslamwaheed.fakestore.base.BaseFragment
 import com.eslamwaheed.fakestore.databinding.FragmentHomeBinding
@@ -20,9 +20,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
             binding.rvProducts.adapter = ProductsAdapter(
                 it, clickAction = {
                     it?.let {
-
+                        findNavController().navigate(
+                            HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
+                                it
+                            )
+                        )
                     }
-
                 })
         }
     }
